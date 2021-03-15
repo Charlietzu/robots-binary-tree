@@ -12,8 +12,8 @@ class SistemaComunicacao {
         SistemaComunicacao();
         ~SistemaComunicacao();
         
-        void ProcessaEntrada(string nomeEntrada);
-        void ProcessaLinha(string linha);
+        void ProcessaEntrada(string nomeEntrada, ArvoreBinaria *arvore);
+        void ProcessaLinha(string linha, ArvoreBinaria *arvore);
 
     private:
         int tamanhoPreenchido;

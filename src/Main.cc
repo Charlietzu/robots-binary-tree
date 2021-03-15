@@ -1,5 +1,6 @@
 #include <iostream>
 #include "SistemaComunicacao.h"
+#include "ArvoreBinaria.h"
 
 FILE *arquivo_entrada;
 
@@ -11,7 +12,8 @@ int main(int argc, char* argv[]) {
         string nomeEntrada = argv[1];
 
         SistemaComunicacao* sistemaComunicacao = new SistemaComunicacao();
-        sistemaComunicacao->ProcessaEntrada(nomeEntrada);
+        ArvoreBinaria* arvore = new ArvoreBinaria();
+        sistemaComunicacao->ProcessaEntrada(nomeEntrada, arvore);
     
     }
     return 0;
