@@ -9,6 +9,7 @@ using namespace std;
 class Letra {
     public:
         Letra();
+        Letra(char valor);
         ~Letra();
         
         void SetLetra(char letra);

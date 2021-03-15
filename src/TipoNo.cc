@@ -3,5 +3,6 @@
 TipoNo::TipoNo(){
     esq = NULL;
     dir = NULL;
-    letra.SetLetra('\0');
+    Letra *letra = new Letra();
+    letra->SetLetra('\0');
 }

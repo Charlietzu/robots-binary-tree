@@ -10,7 +10,7 @@ class TipoNo {
         TipoNo();
 
     private:
-        Letra letra;
+        Letra *letra;
         TipoNo *esq;
         TipoNo *dir;
 

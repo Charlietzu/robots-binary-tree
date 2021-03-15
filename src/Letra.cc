@@ -4,6 +4,10 @@ Letra::Letra(){
     letra = '\0';
 }
 
+Letra::Letra(char valor){
+    letra = valor;
+}
+
 Letra::~Letra(){}
 
 void Letra::SetLetra(char valor){

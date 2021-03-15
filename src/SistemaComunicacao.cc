@@ -24,9 +24,7 @@ void SistemaComunicacao::ProcessaLinha(string linha){
 		ArvoreBinaria *arvore = new ArvoreBinaria();
 		
 		for(int i = 3; i < tamanho; i++){
-			Letra* letra = new Letra();
-			letra->SetLetra(linha[i]);
-			letra->Imprime();
+			arvore->Insere(new Letra(linha[i]));
 		}
 	}
 }

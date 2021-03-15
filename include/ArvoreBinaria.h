@@ -15,16 +15,16 @@ class ArvoreBinaria {
         ArvoreBinaria();
         ~ArvoreBinaria();
         
-        void Insere(Letra item);
+        void Insere(Letra *item);
         void Caminho(int tipo);
-        Letra Pesquisa(int valor);
+        Letra* Pesquisa(int valor);
         void Remove(int valor);
         void Limpa();
 
     private:
-        void InsereRecursivo(TipoNo* &p, Letra item);
+        void InsereRecursivo(TipoNo* &p, Letra *item);
         void ApagaRecursivo(TipoNo* p);
-        Letra PesquisaRecursivo(TipoNo* p, int valor);
+        Letra* PesquisaRecursivo(TipoNo* p, int valor);
         void RemoveRecursivo(TipoNo* &p, int valor);
         void Antecessor(TipoNo* q, TipoNo* &r);
 
