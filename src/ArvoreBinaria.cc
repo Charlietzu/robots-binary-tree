@@ -22,27 +22,6 @@ void ArvoreBinaria::ApagaRecursivo(TipoNo *p){
     }
 }
 
-Letra* ArvoreBinaria::Pesquisa(int valor){
-    return PesquisaRecursivo(raiz, valor);
-}
-
-Letra* ArvoreBinaria::PesquisaRecursivo(TipoNo *no, int valor){
-    Letra *aux = new Letra();
-
-    if(no == NULL){
-        aux->SetLetra('\0');
-        return aux;
-    }
-
-    if(valor < no->letra->GetValorLetra()){
-        return PesquisaRecursivo(no->esq, valor);
-    } else if (valor > no->letra->GetValorLetra()){
-        return PesquisaRecursivo(no->dir, valor);
-    } else {
-        return no->letra;
-    }
-}
-
 void ArvoreBinaria::Insere(Letra *item){
     InsereRecursivo(raiz, item);
 }
@@ -113,6 +92,8 @@ void ArvoreBinaria::CodificaFrase(string frase){
     }
 
     cout << endl;
+
+    free(aux);
 }
 
 void ArvoreBinaria::Codifica(int valor){
@@ -120,11 +101,15 @@ void ArvoreBinaria::Codifica(int valor){
 }
 
 void ArvoreBinaria::CodificaRecursivo(TipoNo *no, int valor){
+    const int arrayPar[5] = {0, 2, 4, 6, 8};
+    const int arrayImpar[5] = {1, 3, 5, 7, 9};
+    int index = rand() % 5;
+    
     if(valor < no->letra->GetValorLetra()){
-        cout <<  1;
+        cout << arrayImpar[index];
         CodificaRecursivo(no->esq, valor);
     } else if (valor > no->letra->GetValorLetra()){
-        cout << 0;
+        cout << arrayPar[index];
         CodificaRecursivo(no->dir, valor);
     } else {
         return;

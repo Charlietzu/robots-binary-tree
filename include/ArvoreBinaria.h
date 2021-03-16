@@ -25,7 +25,6 @@ class ArvoreBinaria {
     private:
         void InsereRecursivo(TipoNo* &p, Letra *item);
         void ApagaRecursivo(TipoNo* p);
-        Letra* PesquisaRecursivo(TipoNo* p, int valor);
         void RemoveRecursivo(TipoNo* &p, int valor);
         void Antecessor(TipoNo* q, TipoNo* &r);
         void CodificaRecursivo(TipoNo* p, int valor);
