@@ -27,5 +27,5 @@ char Letra::GetLetra(){
 }
 
 void Letra::Imprime(){
-    cout << "Letra: " << letra << " - Posicao: " << GetValorLetra() << endl;
+    cout << letra;
 }

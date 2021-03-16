@@ -5,6 +5,8 @@
 #include <iostream>
 #include <string>
 
+#include "ArvoreBinaria.h"
+
 using namespace std;
 
 class SistemaComunicacao {

@@ -16,10 +16,11 @@ class ArvoreBinaria {
         ~ArvoreBinaria();
         
         void Insere(Letra *item);
-        void Caminho(int tipo);
         Letra* Pesquisa(int valor);
         void Remove(int valor);
         void Limpa();
+        void CodificaFrase(string frase);
+        void DecodificaCodigo(string codigo, int valor);
 
     private:
         void InsereRecursivo(TipoNo* &p, Letra *item);
@@ -27,6 +28,10 @@ class ArvoreBinaria {
         Letra* PesquisaRecursivo(TipoNo* p, int valor);
         void RemoveRecursivo(TipoNo* &p, int valor);
         void Antecessor(TipoNo* q, TipoNo* &r);
+        void CodificaRecursivo(TipoNo* p, int valor);
+        void Codifica(int valor);
+        void Decodifica(int valor, string codigo);
+        void DecodificaRecursivo(TipoNo* p, int valor, string codigo);
 
         TipoNo* raiz;
 };
